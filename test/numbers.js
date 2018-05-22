@@ -4,13 +4,13 @@ let expect = require('chai').expect;
 let numbers = require('../numbers');
 
 describe("Give positive array of nums from 1 to limit", function() {
-  it("limit is less than 1", function() {
+  it("where limit is less than 1", function() {
     expect(numbers.toCalculate(0)).to.be.an('array').that.is.empty;
     expect(numbers.toCalculate(-1)).to.be.an('array').that.is.empty;
     expect(numbers.toCalculate(-2)).to.be.an('array').that.is.empty;
   });
 
-  it("limit is greater than 0 and less than 11", function() {
+  it("where limit is greater than 0 and less than 11", function() {
     expect(numbers.toCalculate(1)).to.be.an('array').deep.equal([1]);
     expect(numbers.toCalculate(2)).to.be.an('array').deep.equal([1, 2]);
     expect(numbers.toCalculate(3)).to.be.an('array').deep.equal([1, 2, 3]);
@@ -23,7 +23,7 @@ describe("Give positive array of nums from 1 to limit", function() {
     expect(numbers.toCalculate(10)).to.be.an('array').deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   });
 
-  it("limit is greater than 0 and greater than 10", function() {
+  it("where limit is greater than 10", function() {
     expect(numbers.toCalculate(11)).to.be.an('array').deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
     expect(numbers.toCalculate(10000)).to.be.an('array').deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
     expect(numbers.toCalculate(100000000)).to.be.an('array').deep.equal([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);

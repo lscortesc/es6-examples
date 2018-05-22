@@ -6,3 +6,8 @@ Javascript Examples following:
 - [Javascript Info](http://javascript.info/)
 - [MochaJS](https://mochajs.org/)
 - [Airbnb Style Guide](https://github.com/airbnb/javascript)
+
+## Run tests
+
+- Install dependencies `npm insstall`
+- Run tests `npm test`
