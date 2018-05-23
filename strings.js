@@ -1,9 +1,13 @@
 'use strict'
 
-module.exports.toUpperCase = (sentence) => {
-    if (typeof sentence != 'string') {
-        return '';
-    }
-    
-    return sentence.toUpperCase();
+let toUpperCase = sentence => {
+  if (typeof sentence != 'string') {
+      return '';
+  }
+  
+  return sentence.toUpperCase();
+}
+
+module.exports = {
+  toUpperCase: toUpperCase,
 }

@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports.toCalculate = (limit) => {
+let calculate = limit => {
   let numbers = [];
   
   if (limit < 1) {
@@ -20,4 +20,8 @@ module.exports.toCalculate = (limit) => {
   }
 
   return numbers;
+}
+
+module.exports = {
+  calculate: calculate,
 }

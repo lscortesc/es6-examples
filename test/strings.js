@@ -1,7 +1,7 @@
 'use strict'
 
-let expect = require('chai').expect;
-let functions = require('../strings');
+const expect = require('chai').expect;
+const functions = require('../strings');
 
 describe('String functions', function() {
     it('to uppercase with valid param', function() {
@@ -17,5 +17,8 @@ describe('String functions', function() {
         expect(functions.toUpperCase({})).to.equal('');
         expect(functions.toUpperCase(true)).to.equal('');
         expect(functions.toUpperCase(12.14)).to.equal('');
+        expect(functions.toUpperCase(-12)).to.equal('');
+        expect(functions.toUpperCase(undefined)).to.equal('');
+        expect(functions.toUpperCase(NaN)).to.equal('');
     });
 });
