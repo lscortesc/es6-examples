@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+
 const bundlePath = path.resolve(__dirname, 'dist/');
 
 module.exports = {
@@ -10,23 +11,23 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
-        options: { presets: ['env'] }
+        options: { presets: ['env'] },
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
-      }
-    ]
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
   resolve: { extensions: ['*', '.js', '.jsx'] },
   output: {
     publicPath: bundlePath,
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     port: 5000,
-    publicPath: 'http://localhost:5000/dist'
+    publicPath: 'http://localhost:5000/dist',
   },
-  plugins: [ new webpack.HotModuleReplacementPlugin() ]
+  plugins: [new webpack.HotModuleReplacementPlugin()],
 };
